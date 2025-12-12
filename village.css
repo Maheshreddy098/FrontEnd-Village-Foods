@@ -1,3 +1,5 @@
+body {}
+
 .banner-area {
     padding: 100px 0 200px;
     background-color: #b0b0b0;
@@ -33,7 +35,7 @@ h6 {
 }
 
 
-/* --images-- */
+/* /* --images-- */
 .menu-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -318,4 +320,51 @@ p {
         url('images/fried-food.jpg');
     background-size: cover;
     background-position: center;
+}
+
+/* Responsive: stack special content on small screens */
+@media (max-width: 767px) {
+    .special-section {
+        padding: 30px 20px;
+        text-align: center;
+    }
+
+    .special-content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+        margin-top: 30px;
+    }
+
+    .special-left,
+    .special-right {
+        width: 100%;
+        text-align: center;
+    }
+
+    .special-left img,
+    .special-right img {
+        width: 100%;
+        height: auto;
+        max-width: 100%;
+        border-radius: 6px;
+    }
+
+    .special-left .number,
+    .special-right .number {
+        font-size: 36px;
+        text-align: center;
+    }
+
+    .special-left h2,
+    .special-right h2 {
+        font-size: 26px;
+        text-align: center;
+    }
+
+    .special-left p,
+    .special-right p {
+        text-align: center;
+    }
 }
